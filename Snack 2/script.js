@@ -23,3 +23,30 @@ const highGrades = students.filter(student => student.grades > 70);
 // Lista degli studenti con voto 120
 const highGradesHighId = students.filter(student => student.grades > 70 && student.id > 120);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// # Sezione Funzioni --------------------------------------------------------
+// Funzione per creare e appendere elementi alla lista
+function appendToList(listId, items) {
+    const list = document.getElementById(listId);
+    list.innerHTML = '';
+    items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        list.appendChild(li);
+    });
+}
