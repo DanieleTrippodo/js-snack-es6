@@ -20,3 +20,12 @@ Id  Name                Grades
 
 # Svolgimento
 creiamo una variabile constante tutti gli studenti in un array ad oggetti
+
+convertiamo tutti i nomi in uppercase con "map" per prendere i nomi
+
+possiamo usare "filter" per creare una nuova lista degli studenti con i voti superiori a 70
+
+usiamo lo stesso metodo con "filter" per prendere quelli con 120
+
+aggiungiamo gli elementi corrispondenti in una lista nel DOM
+

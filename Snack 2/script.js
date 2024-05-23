@@ -12,3 +12,14 @@ const students = [
 
 // convertiamo tutti i nomi degli studenti in maiuscolo
 const uppercaseNames = students.map(student => student.name.toUpperCase());
+
+
+
+
+
+// Lista degli studenti con voto 70
+const highGrades = students.filter(student => student.grades > 70);
+
+// Lista degli studenti con voto 120
+const highGradesHighId = students.filter(student => student.grades > 70 && student.id > 120);
+
