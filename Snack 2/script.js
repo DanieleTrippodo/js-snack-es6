@@ -57,7 +57,5 @@ function appendToList(listId, items) {
             li.textContent = item;
             list.appendChild(li);
         });
-    } else {
-        console.error(`errore`);
-    }
+    } 
 }
