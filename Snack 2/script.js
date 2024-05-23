@@ -1,5 +1,5 @@
 // Elenco degli studenti
-const students = [
+let students = [
     { id: 213, name: 'Giuseppina della Rovere', grades: 78 },
     { id: 110, name: 'Paola Cortellessa', grades: 96 },
     { id: 250, name: 'Andrea Mantegna', grades: 48 },
@@ -26,9 +26,16 @@ const highGradesHighId = students.filter(student => student.grades > 70 && stude
 
 
 
+// ! Aggiungiamo gli elementi nelle liste ---------------------------------
+// Aggiungi nomi in maiuscolo alla lista
+appendToList('Nomi in maiuscolo', uppercaseNames);
 
+// Aggiungi studenti con voti > 70 alla lista
+appendToList('Voti Superiori al 70', highGrades.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
 
-
+// Aggiungi studenti con voti > 70 e ID > 120 alla lista
+appendToList('Voti superirori al 120 e ID', highGradesHighId.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
+// ! Aggiungiamo gli elementi nelle liste --------FINE----------------------
 
 
 
@@ -43,10 +50,14 @@ const highGradesHighId = students.filter(student => student.grades > 70 && stude
 // Funzione per creare e appendere elementi alla lista
 function appendToList(listId, items) {
     const list = document.getElementById(listId);
-    list.innerHTML = '';
-    items.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        list.appendChild(li);
-    });
+    if (list) {
+        list.innerHTML = '';
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            list.appendChild(li);
+        });
+    } else {
+        console.error(`errore`);
+    }
 }
