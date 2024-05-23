@@ -28,13 +28,13 @@ const highGradesHighId = students.filter(student => student.grades > 70 && stude
 
 // ! Aggiungiamo gli elementi nelle liste ---------------------------------
 // Aggiungi nomi in maiuscolo alla lista
-appendToList('Nomi in maiuscolo', uppercaseNames);
+appendToList('uppercase-names', uppercaseNames);
 
 // Aggiungi studenti con voti > 70 alla lista
-appendToList('Voti Superiori al 70', highGrades.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
+appendToList('high-grades', highGrades.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
 
 // Aggiungi studenti con voti > 70 e ID > 120 alla lista
-appendToList('Voti superirori al 120 e ID', highGradesHighId.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
+appendToList('high-grades-high-id', highGradesHighId.map(student => `${student.name} (ID: ${student.id}, Grades: ${student.grades})`));
 // ! Aggiungiamo gli elementi nelle liste --------FINE----------------------
 
 
