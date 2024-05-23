@@ -11,4 +11,14 @@ const guests = [
 ];
 
 
-console.log('tutti gli invitati', guests);
+// Creazione della lista dei segnaposto
+const placeholders = guests.map((guest, index) => ({
+    tableName: tableName,
+    guestName: guest,
+    place: index + 1
+}));
+
+
+
+// verifica in console
+console.log('Lista degli invitati',placeholders);
